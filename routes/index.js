@@ -25,3 +25,7 @@ exports.calc = function(req, res){
 	res.render('index', { title: 'Calculator', answer: ans });
   ans = null;
 };
+
+exports.test = function(req,res){
+  res.render('test', { title: 'Calculator'});
+};
