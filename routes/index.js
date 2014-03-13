@@ -12,14 +12,16 @@ exports.calc = function(req, res){
 	var num1 = Number(req.body.num1);
 	var num2 = Number(req.body.num2);
 	var op = req.body.op;
+  var ans;
 	if (op == '+') {
-		var ans = math.add(num1,num2);
+		ans = math.add(num1,num2);
 	} else if (op == '-') {
-		var ans = math.subtract(num1,num2);
+		ans = math.subtract(num1,num2);
 	} else if (op == '*') {
-		var ans = math.multiply(num1,num2);
+		ans = math.multiply(num1,num2);
 	} else {
-		var ans = math.divide(num1,num2);
+		ans = math.divide(num1,num2);
 	}
-	res.render('answer', { title: 'Answer', answer: ans });
+	res.render('index', { title: 'Calculator', answer: ans });
+  ans = null;
 };
