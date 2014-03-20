@@ -4,6 +4,7 @@
  */
 var math = require("../public/javascripts/math.js");
 
+
 exports.index = function(req, res){
   res.render('index', { title: 'Calculator' });
 };
@@ -22,6 +23,7 @@ exports.calc = function(req, res){
 	} else {
 		ans = math.divide(num1,num2);
 	}
+
 	res.render('index', { title: 'Calculator', answer: ans });
   ans = null;
 };

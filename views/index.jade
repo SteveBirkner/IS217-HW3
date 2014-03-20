@@ -3,7 +3,7 @@ block content
 	h1
 		a(href='/') #{title}
 	div
-		form(action='/calc', method='post')
+		form(id='calcForm', action='/calc', method='post')
 			label(for='num1') First Number:
 				br
 				input(id='num1', type='number', value='', name='num1')
@@ -27,4 +27,10 @@ block content
 				input(id='num2', type='number', value='', name='num2')
 			br
 			input(type='submit',value='Calculate!')
-	p The answer is #{answer}
+	#qunit-fixture
+		p The answer is
+		p#ans #{answer}
+
+	p The answer is
+	h3#ans #{answer}
+	div#qunit
